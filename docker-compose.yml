@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  app:  ##service name
+    container_name: haha  ## container_name
+    build:
+      context: .  ##build docker file loction
+      dockerfile: Dockerfile  ##docker file name
+    environment:  ## set env
+      - TZ=Asia/Seoul
+    ports:
+      - "9999:8080"
